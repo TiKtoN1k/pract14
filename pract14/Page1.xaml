@@ -1,0 +1,38 @@
+﻿<Page x:Class="pract14.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:pract14"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Имя записи" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontSize="15"/>
+        <TextBlock Text="Сумма денег" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontSize="15"/>
+        <TextBlock Text="Тип записи" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontSize="15"/>
+        <TextBox x:Name="Name" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" FontSize="15"/>
+        <TextBox x:Name="Price" Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" FontSize="15"/>
+        <ComboBox x:Name="Type" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" FontSize="15"/>
+        <Button Content="Добавить запись" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Click="Button_Click"/>
+        <Button Content="Удалить запись" Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Click="Button_Click_1"/>
+        <Button Content="Изменить запись" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Click="Button_Click_2"/>
+        <DataGrid x:Name="uchetDTG" Grid.Row="1" Grid.RowSpan="7"  SelectionChanged="uchetDTG_SelectionChanged"/>
+    </Grid>
+</Page>
